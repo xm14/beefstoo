@@ -1,0 +1,511 @@
+#riceuniversity{
+	animation: fadein 4s, rice 6s infinite;
+	margin-bottom: 10vh;
+}
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@font-face {
+    font-family: 'free_pixelregular';
+    src: url('freepixel-webfont.woff2') format('woff2'),
+         url('freepixel-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto_monolight';
+    src: url('robotomono-light-webfont.woff2') format('woff2'),
+         url('robotomono-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body{
+	font-family: roboto_monolight;
+	background-color: rgb(252, 246, 245);
+	font-size: 15px;
+}
+
+h2{
+	color: rgb(0,0,0);
+
+
+}
+p{
+	color: rgb(46, 48, 46);
+}
+
+
+.page-wrapper {
+	width: 60vw;
+	min-width: 300px;
+	margin: auto;
+	left: 0;
+	right: 0;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.page-wrapper > * {
+	margin-left: 5vh;
+	margin-right: 5vh;
+}
+.college_village{
+	display: inline-block;
+	z-index: 2;
+	position: relative;
+	transition: transform 0.1s;
+	transition-duration: 0.1s;
+	transition-timing-function: ease-in-out;
+}
+
+
+#island {
+	display: block;
+	position: relative;
+	height: 110vh;
+	width: 110vh;
+	z-index: 0;
+}
+#island_img {
+	position: absolute;
+	top: 7em;
+	height: 110vh;
+	width: 110vh;
+}
+.popover {
+	display: block;
+	position: absolute;
+	opacity: 0;
+	background-color: transparent;
+	padding: 0.5em;
+	height: 7em;
+	pointer-events: none;
+	transition-duration: 1s;
+	font-size: 8pt;
+}
+
+.college_village_div {
+	position: absolute;
+	left: 0;
+	height: 110vh;
+	width: 110vh;
+	overflow: visible;
+	pointer-events: none;
+}
+.college_village_div:hover .popover {
+	opacity: 1;
+	z-index: 3;
+	pointer-events: visible;
+}
+.college_village_img {
+	pointer-events: visible;
+	height: 25vh;
+	width: 25vh;
+	z-index: 4;
+}
+
+.college_village_img:hover {
+	position: absolute;
+	top: Calc(20% + 7em);
+	left:60% ;
+	transition-duration: 0.5s;
+	transform: translateY(-7px);
+}
+
+#baker_village_img {
+	z-index: 6;
+	position: absolute;
+	top: Calc(60% + 7em);
+	left:4% ;
+}
+
+#jones_village_img {
+	position: absolute;
+	top: Calc(30% + 7em);
+	left: 60%;
+}
+
+#lovett_village_img {
+	position: absolute;
+	top: Calc(45% + 7em);
+	left: 59%;
+}
+
+#brown_village_img {
+	position: absolute;
+	top: Calc(40% + 7em);
+	left:70%;
+}
+
+#sid_village_img {
+	position: absolute;
+	top: Calc(35% + 7em);
+	left: 14%;
+}
+
+
+#hanszen_village_img {
+	position: absolute;
+	top: Calc(27% + 7em);
+	left: 43%;
+}
+
+#duncan_village_img {
+	position: absolute;
+	top: Calc(66% + 7em);
+	left: 18%;
+}
+
+#willrice_village_img {
+	position: absolute;
+	top: Calc(48% + 7em);
+	left: 2%;
+}
+
+#mcmurtry_village_img {
+	position: absolute;
+	top: Calc(60% + 7em);
+	left: 30%;
+}
+
+
+
+#weiss_village_img {
+	position: absolute;
+	top: Calc(30% + 7em);
+	left: 26%;
+}
+
+#martel_village_img{
+	position: absolute;
+	top: Calc(55% + 7em);
+	left: 43%;
+}
+
+#fountain{
+	width: 26vh;
+	height: 26vh;
+	position: absolute;
+	top: Calc(43% + 7em);
+	left: 40%;
+	z-index: 3;
+
+}
+
+#tree1{
+	width: 16vh;
+	height: 16vh;
+	position: absolute;
+	top: Calc(55% + 7em);
+	left: 30%;
+	z-index: 3;
+
+}
+
+#tree2{
+	width: 16vh;
+	height: 16vh;
+	position: absolute;
+	top: Calc(44% + 7em);
+	left: 9%;
+	z-index: 2;
+
+}
+
+#tree3{
+	width: 22vh;
+	height: 22vh;
+	position: absolute;
+	top: Calc(49% + 7em);
+	left: 60%;
+	z-index: 35;
+
+}
+
+#tree4{
+	width: 23vh;
+	height: 23vh;
+	position: absolute;
+	top: Calc(35% + 7em);
+	left: 85%;
+	z-index: 5;
+
+}
+
+.tree{
+	pointer-events: none;
+}
+
+#road{
+	width: 80vh;
+	height: 80vh;
+	position: absolute;
+	top: Calc(18% + 7em);
+	left: 10%;
+	z-index:1 ;
+	opacity:0.3;
+}
+
+#woman{
+	position: absolute;
+	top: Calc(50% + 7em);
+	left: 40%;
+	z-index: 3;
+	background: url("woman.gif");
+	width:20vh;
+	height:20vh;
+	animation-name: walking;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+}
+
+#man{
+	position: absolute;
+	top: Calc(40% + 7em);
+	left: 60%;
+	z-index: 3;
+	background: url("man.gif");
+	width:20vh;
+	height:20vhx;
+	animation-name: walking2;
+	animation-iteration-count: infinite;
+	animation-duration: 8s;
+}
+
+#cloud1 {
+	background: url("cloud.png");
+	width:20vh;
+	height:20vh;
+	position: absolute;
+	top: Calc(5% + 7em);
+	left: 60%;
+	animation-name: drop;
+	animation-iteration-count: infinite;
+	animation-duration: 12s;
+}
+
+#cloud2 {
+	background: url("cloud2.png");
+	width:14vh;
+	height:14vh;
+	position: absolute;
+	top: Calc(28% + 7em);
+	left: 60%;
+	animation-name: drop2;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	z-index: 5;
+
+
+}
+
+#cloud3 {
+	background: url("cloud1.png");
+	width:20vh;
+	height:20vh;
+	position: absolute;
+	top: Calc(17% + 7em);
+	left: 20%;
+	animation-name: drop;
+	animation-delay: 2s;
+	animation-iteration-count: infinite;
+	animation-duration: 12s;
+}
+
+#cloud4 {
+	background: url("cloud2.png");
+	width:14vh;
+	height:14vh;
+	position: absolute;
+	top: Calc(50% + 7em);
+	left: 20%;
+	animation-name: drop3;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;pi
+	z-index: 5;
+
+
+}
+
+#cloud5 {
+	background: url("cloud.png");
+	width:20vh;
+	height:20vh;
+	position: absolute;
+	top: Calc(-14% + 7em);
+	left: 20%;
+	animation-name: drop4;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	z-index: 5;
+
+
+}
+
+#cloud6 {
+	background: url("cloud.png");
+	width:30vh;
+	height:28vh;
+	position: absolute;
+	top: Calc(-20% + 7em);
+	left: 20%;
+	animation-name: drop5;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	z-index: 5;
+
+
+}
+.cloud {
+	pointer-events: none;
+}
+@keyframes drop {
+	0%{transform: translateX(0);	}
+	50%{transform: translateX(25vh);}
+	100%{transform: translateX(0)}
+
+}
+
+@keyframes drop2 {
+	0%{transform: translateX(-25vh);	}
+	10%{transform:translateX(-25vh);}
+	50%{transform: translateX(0vh);}
+	100%{transform: translateX(-25vh)}
+
+}
+
+@keyframes drop3 {
+	0%{transform: translateX(-30vh);	}
+	33%{transform:translateX(-25vh);}
+	66%{transform: translateX(0vh);}
+	100%{transform: translateX(-30vh)}
+
+}
+
+@keyframes drop4 {
+	0%{transform: translateX(-30vh);	}
+	50%{transform:translateX(-0vh);}
+	66%{transform: translateX(-15vh);}
+	100%{transform: translateX(-30vh)}
+
+}
+
+@keyframes drop5 {
+	0%{transform: translateX(0vh);	}
+	33%{transform:translateX(10vh);}
+	66%{transform: translateX(15);}
+	100%{transform: translateX(0vh)}
+}
+
+@keyframes walking {
+	0%{transform: translateX(0);	}
+	100%{transform: translateX(-30vh);}
+
+}
+
+@keyframes walking2 {
+	0%{transform: translateX(0) translateY(0);;	}
+	50%{transform: translateX(-10vh)translateY(10vh);;	}
+	100%{transform: translateX(-20vh)translateY(20vh);	}
+
+}
+
+
+
+@keyframes rice {
+	0%{transform: translateX(0) opacity(1);	}
+	25%{transform: translatey(4vh) skewY(3deg) ;}
+	50%{transform: translatey(0);}
+	75%{transform: translatey(4vh)skewY(-2deg) skewx(-2deg);;}
+	200%{transform: translatey(0);}
+}
+
+.rain_container{
+	top:0px;
+	width:100%;
+	height:100%;
+	position:fixed;
+	left:0%;
+}
+
+.rain {
+    text-align: center;
+}
+.rain span {
+    display: inline-block;
+    width: 50px;
+    height: 100px;
+	margin: -2100px 40px 54px  -34px;
+	background:url("rain.png");
+
+    -webkit-animation: loader 10s infinite  linear;
+    -moz-animation: loader 10s infinite  linear;
+}
+.rain span:nth-child(5n+5) {
+
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+.rain span:nth-child(3n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+.rain span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.rain span:nth-child(3n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+.rain span:nth-child(7n+2) {
+
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+.rain span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+.rain span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+@keyframes loader {
+  0% {
+    width: 50px;
+    height: 100px;
+    opacity: 1;
+
+	-webkit-transform: translate(0, 0px);
+  }
+  75% {
+    width: 50px;
+    height: 100px;
+    opacity: 1;
+
+	-webkit-transform: translate(50px, 600px);
+  }
+  100% {
+    width: 50px;
+    height: 100px;
+    opacity: 0;
+
+	-webkit-transform: translate(150px, 800px);
+  }
+}
